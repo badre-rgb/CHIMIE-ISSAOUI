@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QCM interactif de 200 questions de chimie - 2 BAC Sciences Physiques">
+  <title>QCM Chimie | 200 questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">H</div><div><strong>Prof. Hamza El Issaoui</strong><span>2 BAC Sciences Physiques · Chimie</span></div></div>
+    <div class="top-tag">QCM INTERACTIF</div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> ENTRAÎNEMENT · CHIMIE</div>
+      <h1>Maîtrisez la <em>chimie.</em></h1>
+      <p>200 questions pour réviser les notions, les formules et les applications des cours.</p>
+      <div class="stats">
+        <div><strong>200</strong><span>Questions</span></div>
+        <div><strong>10</strong><span>Thèmes</span></div>
+        <div><strong>4</strong><span>Choix par question</span></div>
+      </div>
+    </section>
+    <section class="quiz-card" id="quizCard">
+      <div class="quiz-head">
+        <div><span class="kicker" id="chapter">OXYDORÉDUCTION</span><h2 id="questionTitle">Question 1</h2></div>
+        <div class="counter"><strong id="current">01</strong><span>/ 200</span></div>
+      </div>
+      <div class="progress-track"><div id="progress" class="progress-fill"></div></div>
+      <div class="meta-row"><span id="answered">0 réponse validée</span><span id="scoreLive">Score : 0</span></div>
+      <p class="question-text" id="questionText"></p>
+      <div class="answers" id="answers"></div>
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="prevBtn" disabled>← Précédente</button>
+        <button class="btn btn-primary" id="validateBtn">Valider la réponse <span>→</span></button>
+        <button class="btn btn-primary hidden" id="nextBtn">Question suivante <span>→</span></button>
+      </div>
+    </section>
+    <section class="result-card hidden" id="resultCard">
+      <div class="result-orb">✓</div><span class="kicker">BILAN FINAL</span>
+      <h2>Votre résultat</h2>
+      <div class="final-score"><strong id="finalScore">0</strong><span>/ 200</span></div>
+      <p id="resultMessage"></p>
+      <div class="result-details"><div><strong id="correctCount">0</strong><span>Bonnes réponses</span></div><div><strong id="wrongCount">0</strong><span>À revoir</span></div><div><strong id="percent">0%</strong><span>Réussite</span></div></div>
+      <button class="btn btn-primary" id="restartBtn">Recommencer le QCM ↻</button>
+      <button class="btn btn-ghost" id="reviewBtn">Voir la correction détaillée</button>
+    </section>
+    <section class="review-card hidden" id="reviewCard"><div class="review-heading"><div><span class="kicker">CORRECTION</span><h2>Révision des 200 questions</h2></div><button class="btn btn-ghost" id="closeReview">Fermer</button></div><div id="reviewList"></div></section>
+    <footer>Conçu pour l’entraînement · Cours de chimie 2 BAC · Prof. Hamza El Issaoui</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
